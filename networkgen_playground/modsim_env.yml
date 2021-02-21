@@ -8,5 +8,5 @@ dependencies:
   - networkx
   - matplotlib
   - django=3.1.5
+  - numpy
 prefix: /Users/jscheen/anaconda2/envs/modsim
-
