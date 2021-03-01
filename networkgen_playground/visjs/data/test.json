@@ -1,16 +1,16 @@
 {"nodes":[
-    {"id":"1", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/17.png?raw=true" }
-    ,{"id":"2", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/1h1q.png?raw=true" }
-    ,{"id":"3", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/1h1r.png?raw=true" }
-    ,{"id":"5", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/1h1s.png?raw=true" }
-    ,{"id":"6", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/1oiu.png?raw=true" }
-    ,{"id":"7", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/1oiy.png?raw=true" }
-    ,{"id":"8", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/20.png?raw=true" }
-    ,{"id":"9", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/21.png?raw=true" }
-    ,{"id":"10", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/22.png?raw=true" }
-    ,{"id":"11", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/26.png?raw=true" }
-    ,{"id":"12", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/28.png?raw=true" }
-    ,{"id":"13", "shape":"circularImage", "image":"https://github.com/GPCR-ModSim/qfepweb/tree/networkgen/networkgen_playground/visjs/imgs/29.png?raw=true" }
+    {"id":"1", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/17.png" }
+    ,{"id":"2", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/1h1q.png" }
+    ,{"id":"3", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/1h1r.png" }
+    ,{"id":"5", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/1h1s.png" }
+    ,{"id":"6", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/1oiu.png" }
+    ,{"id":"7", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/1oiy.png" }
+    ,{"id":"8", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/20.png" }
+    ,{"id":"9", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/21.png" }
+    ,{"id":"10", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/22.png" }
+    ,{"id":"11", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/26.png" }
+    ,{"id":"12", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/28.png" }
+    ,{"id":"13", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/29.png" }
 ],
 "edges":[
   {"from":"1", "to":"2", "label":"2.3"}
