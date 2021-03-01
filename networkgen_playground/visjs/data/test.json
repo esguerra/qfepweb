@@ -1,0 +1,33 @@
+{"nodes":[
+    {"id":"1", "shape":"circularImage", "image":"imgs/17.png" }
+    ,{"id":"2", "shape":"circularImage", "image":"imgs/1h1q.png" }
+    ,{"id":"3", "shape":"circularImage", "image":"imgs/1h1r.png" }
+    ,{"id":"5", "shape":"circularImage", "image":"imgs/1h1s.png" }
+    ,{"id":"6", "shape":"circularImage", "image":"imgs/1oiu.png" }
+    ,{"id":"7", "shape":"circularImage", "image":"imgs/1oiy.png" }
+    ,{"id":"8", "shape":"circularImage", "image":"imgs/20.png" }
+    ,{"id":"9", "shape":"circularImage", "image":"imgs/21.png" }
+    ,{"id":"10", "shape":"circularImage", "image":"imgs/22.png" }
+    ,{"id":"11", "shape":"circularImage", "image":"imgs/26.png" }
+    ,{"id":"12", "shape":"circularImage", "image":"imgs/28.png" }
+    ,{"id":"13", "shape":"circularImage", "image":"imgs/29.png" }
+],
+"edges":[
+  {"from":"1", "to":"2", "label":"2.3"}
+  ,{"from":"1", "to":"3", "label":"-8.7"}
+  ,{"from":"2", "to":"4", "label":"NaN"}
+  ,{"from":"3", "to":"5", "label":"9.8"}
+  ,{"from":"4", "to":"3", "label":"-2.3"}
+  ,{"from":"5", "to":"6", "label":"-8.7"}
+  ,{"from":"6", "to":"7", "label":"NaN"}
+  ,{"from":"7", "to":"8", "label":"9.8"}
+  ,{"from":"8", "to":"9", "label":"-2.3"}
+  ,{"from":"11", "to":"10", "label":"-9.1"}
+  ,{"from":"10", "to":"5", "label":"-0.9"}
+  ,{"from":"11", "to":"4", "label":"-8.7"} 
+  ,{"from":"12", "to":"4", "label":"NaN"}
+  ,{"from":"13", "to":"5", "label":"9.8"}
+  ,{"from":"12", "to":"3", "label":"-2.3"}
+  ,{"from":"13", "to":"8", "label":"-8.7"}
+]
+}
