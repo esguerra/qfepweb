@@ -1,0 +1,4 @@
+[submodule "networkgen_playground/visjs/vis"] 
+  path = networkgen_playground/visjs/vis
+  url = git@github.com:GPCR-ModSim/qfepweb.git
+  
