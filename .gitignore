@@ -11,6 +11,6 @@ lib
 .env
 .idea
 .vscode
-
 pyvenv.cfg
 db.sqlite3
+networkgen_playground/visjs/vis
