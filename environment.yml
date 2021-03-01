@@ -1,4 +1,4 @@
-name: modsim
+name: networkgen
 channels:
   - conda-forge
   - defaults
@@ -9,4 +9,4 @@ dependencies:
   - matplotlib
   - django=3.1.5
   - numpy
-prefix: /Users/jscheen/anaconda2/envs/modsim
+
