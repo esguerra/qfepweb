@@ -1,33 +1,254 @@
-{"nodes":[
-    {"id":"1", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/17.png" }
-    ,{"id":"2", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/1h1q.png" }
-    ,{"id":"3", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/1h1r.png" }
-    ,{"id":"5", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/1h1s.png" }
-    ,{"id":"6", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/1oiu.png" }
-    ,{"id":"7", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/1oiy.png" }
-    ,{"id":"8", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/20.png" }
-    ,{"id":"9", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/21.png" }
-    ,{"id":"10", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/22.png" }
-    ,{"id":"11", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/26.png" }
-    ,{"id":"12", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/28.png" }
-    ,{"id":"13", "shape":"circularImage", "image":"https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/visjs/imgs/29.png" }
-],
-"edges":[
-  {"from":"1", "to":"2", "label":"2.3"}
-  ,{"from":"1", "to":"3", "label":"-8.7"}
-  ,{"from":"2", "to":"4", "label":"NaN"}
-  ,{"from":"3", "to":"5", "label":"9.8"}
-  ,{"from":"4", "to":"3", "label":"-2.3"}
-  ,{"from":"5", "to":"6", "label":"-8.7"}
-  ,{"from":"6", "to":"7", "label":"NaN"}
-  ,{"from":"7", "to":"8", "label":"9.8"}
-  ,{"from":"8", "to":"9", "label":"-2.3"}
-  ,{"from":"11", "to":"10", "label":"-9.1"}
-  ,{"from":"10", "to":"5", "label":"-0.9"}
-  ,{"from":"11", "to":"4", "label":"-8.7"} 
-  ,{"from":"12", "to":"4", "label":"NaN"}
-  ,{"from":"13", "to":"5", "label":"9.8"}
-  ,{"from":"12", "to":"3", "label":"-2.3"}
-  ,{"from":"13", "to":"8", "label":"-8.7"}
-]
+{
+    "nodes": [
+        {
+            "shape": "circularImage",
+            "label": "20",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/20.png",
+            "id": "20"
+        },
+        {
+            "shape": "circularImage",
+            "label": "1oi9",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/1oi9.png",
+            "id": "1oi9"
+        },
+        {
+            "shape": "circularImage",
+            "label": "28",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/28.png",
+            "id": "28"
+        },
+        {
+            "shape": "circularImage",
+            "label": "1oiy",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/1oiy.png",
+            "id": "1oiy"
+        },
+        {
+            "shape": "circularImage",
+            "label": "1oiu",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/1oiu.png",
+            "id": "1oiu"
+        },
+        {
+            "shape": "circularImage",
+            "label": "1h1q",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/1h1q.png",
+            "id": "1h1q"
+        },
+        {
+            "shape": "circularImage",
+            "label": "30",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/30.png",
+            "id": "30"
+        },
+        {
+            "shape": "circularImage",
+            "label": "32",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/32.png",
+            "id": "32"
+        },
+        {
+            "shape": "circularImage",
+            "label": "31",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/31.png",
+            "id": "31"
+        },
+        {
+            "shape": "circularImage",
+            "label": "22",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/22.png",
+            "id": "22"
+        },
+        {
+            "shape": "circularImage",
+            "label": "1h1s",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/1h1s.png",
+            "id": "1h1s"
+        },
+        {
+            "shape": "circularImage",
+            "label": "26",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/26.png",
+            "id": "26"
+        },
+        {
+            "shape": "circularImage",
+            "label": "1h1r",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/1h1r.png",
+            "id": "1h1r"
+        },
+        {
+            "shape": "circularImage",
+            "label": "21",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/21.png",
+            "id": "21"
+        },
+        {
+            "shape": "circularImage",
+            "label": "17",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/17.png",
+            "id": "17"
+        },
+        {
+            "shape": "circularImage",
+            "label": "29",
+            "image": "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb/networkgen/networkgen_playground/data/mol_images/29.png",
+            "id": "29"
+        }
+    ],
+    "edges": [
+        {
+            "label": "1.03\n\u00b10.3",
+            "freenrg": "1.03",
+            "sem": "0.3",
+            "crashes": "0",
+            "from": "20",
+            "to": "1h1r"
+        },
+        {
+            "label": "0.8\n\u00b10.3",
+            "freenrg": "0.8",
+            "sem": "0.29",
+            "crashes": "0",
+            "from": "20",
+            "to": "17"
+        },
+        {
+            "label": "2.33\n\u00b10.4",
+            "freenrg": "2.33",
+            "sem": "0.41",
+            "crashes": "0",
+            "from": "1oi9",
+            "to": "26"
+        },
+        {
+            "label": "-0.46\n\u00b10.4",
+            "freenrg": "-0.46",
+            "sem": "0.37",
+            "crashes": "0",
+            "from": "1oi9",
+            "to": "1oiy"
+        },
+        {
+            "label": "-3.03\n\u00b10.3",
+            "freenrg": "-3.03",
+            "sem": "0.31",
+            "crashes": "0",
+            "from": "1oi9",
+            "to": "1h1q"
+        },
+        {
+            "label": "0.25\n\u00b10.2",
+            "freenrg": "0.25",
+            "sem": "0.19",
+            "crashes": "0",
+            "from": "28",
+            "to": "29"
+        },
+        {
+            "label": "0.69\n\u00b10.2",
+            "freenrg": "0.69",
+            "sem": "0.25",
+            "crashes": "0",
+            "from": "28",
+            "to": "30"
+        },
+        {
+            "label": "-3.61\n\u00b10.6",
+            "freenrg": "-3.61",
+            "sem": "0.63",
+            "crashes": "0",
+            "from": "1oiy",
+            "to": "22"
+        },
+        {
+            "label": "-0.99\n\u00b10.6",
+            "freenrg": "-0.99",
+            "sem": "0.63",
+            "crashes": "0",
+            "from": "1oiu",
+            "to": "32"
+        },
+        {
+            "label": "-0.33\n\u00b10.4",
+            "freenrg": "-0.33",
+            "sem": "0.39",
+            "crashes": "0",
+            "from": "1oiu",
+            "to": "1h1s"
+        },
+        {
+            "label": "-0.71\n\u00b10.3",
+            "freenrg": "-0.71",
+            "sem": "0.3",
+            "crashes": "0",
+            "from": "1h1q",
+            "to": "1h1r"
+        },
+        {
+            "label": "1.26\n\u00b10.3",
+            "freenrg": "1.26",
+            "sem": "0.3",
+            "crashes": "0",
+            "from": "30",
+            "to": "31"
+        },
+        {
+            "label": "1.21\n\u00b10.2",
+            "freenrg": "1.21",
+            "sem": "0.16",
+            "crashes": "0",
+            "from": "30",
+            "to": "1h1s"
+        },
+        {
+            "label": "0.33\n\u00b10.2",
+            "freenrg": "0.33",
+            "sem": "0.21",
+            "crashes": "0",
+            "from": "30",
+            "to": "29"
+        },
+        {
+            "label": "-2.93\n\u00b10.4",
+            "freenrg": "-2.93",
+            "sem": "0.35",
+            "crashes": "0",
+            "from": "32",
+            "to": "1h1s"
+        },
+        {
+            "label": "-1.18\n\u00b10.4",
+            "freenrg": "-1.18",
+            "sem": "0.37",
+            "crashes": "0",
+            "from": "31",
+            "to": "26"
+        },
+        {
+            "label": "-1.32\n\u00b10.4",
+            "freenrg": "-1.32",
+            "sem": "0.35",
+            "crashes": "0",
+            "from": "22",
+            "to": "21"
+        },
+        {
+            "label": "-0.91\n\u00b10.6",
+            "freenrg": "-0.91",
+            "sem": "0.61",
+            "crashes": "0",
+            "from": "26",
+            "to": "21"
+        },
+        {
+            "label": "0.31\n\u00b10.2",
+            "freenrg": "0.31",
+            "sem": "0.21",
+            "crashes": "0",
+            "from": "1h1r",
+            "to": "17"
+        }
+    ]
 }

@@ -58,10 +58,13 @@ if __name__ == "__main__":
 		# keyword for visjs to recognise that node should be a circular image.
 		G.nodes[node]["shape"] = "circularImage"
 
+		# set label to ligand name to make visjs show it.
+		G.nodes[node]["label"] = node
+
 		# add image path.
 		##! change path to web path on integration! github link is for dev only.
 		G.nodes[node]["image"] = "https://raw.githubusercontent.com/GPCR-ModSim/qfepweb"+\
-				"/networkgen/networkgen_playground/visjs/imgs/{}.png".format(node)
+				"/networkgen/networkgen_playground/data/mol_images/{}.png".format(node)
 
 	# add information to edges.
 
@@ -89,7 +92,7 @@ if __name__ == "__main__":
 	# we only need node + edge information, remove redundant networkx keys.
 	graph_data = {k: graph_data[k] for k in ("nodes", "edges")}
 
-	with open("data/tmp.json", "w") as jsonfile:
+	with open("data/graph.json", "w") as jsonfile:
 		json.dump(graph_data, jsonfile, indent=4)
 
 	############# RDKIT MOLECULE IMAGE GENERATION ###################

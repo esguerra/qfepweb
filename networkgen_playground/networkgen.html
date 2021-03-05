@@ -19,7 +19,7 @@
     #mynetwork {
         /* width: 600px; */
         width: 100%;
-        height: 600px;
+        height: 700px;
         border: 2px solid lightgray;
     }
     </style>
@@ -49,7 +49,8 @@ var options = {
   // probably should do this. node clicking is inconsistent currently.
   //shape: "image",
   borderWidth: 1,
-  size: 40,
+  shape: "image",
+  size: 70,
   color: {
     border: "#222222",
     background: "white",
@@ -68,12 +69,9 @@ var options = {
   // PHYSICS
   "physics": {
   "solver": "forceAtlas2Based",
-//  "forceAtlas2Based": {
-//    "gravitationalConstant": -200,
-//    "springLength": 400,
-//    "springConstant": 0.36,
-//    "avoidOverlap": 1
-//  }
+  "forceAtlas2Based": {
+    "avoidOverlap": 1
+  }
 },
   // ------------------------------------
   // MANIPULATION
@@ -88,7 +86,7 @@ var options = {
 // -------------------------------------------------------------------------
 // IMPORT DATA FROM JSON:
 
-var json = $.getJSON("data/tmp.json")
+var json = $.getJSON("data/graph.json")
   .done(function(data){
     var data = {
       nodes: data.nodes,
