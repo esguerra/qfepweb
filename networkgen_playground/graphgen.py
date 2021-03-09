@@ -56,7 +56,7 @@ if __name__ == "__main__":
 	for node in G.nodes:
 
 		# keyword for visjs to recognise that node should be a circular image.
-		G.nodes[node]["shape"] = "circularImage"
+		G.nodes[node]["shape"] = "image"
 
 		# set label to ligand name to make visjs show it.
 		G.nodes[node]["label"] = node

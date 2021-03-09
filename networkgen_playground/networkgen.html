@@ -50,7 +50,14 @@ var options = {
   //shape: "image",
   borderWidth: 1,
   shape: "image",
+  shapeProperties: {
+     useBorderWithImage : true
+  },
   size: 70,
+  font : {
+    size : 19,
+    color : 'blue'
+  },
   color: {
     border: "#222222",
     background: "white",
@@ -61,18 +68,22 @@ var options = {
   }},
   "edges": {
     color: "lightgray",
-    "smooth": {
-      "forceDirection": "none"
-    }
+    "smooth": false
+//      {
+//      "forceDirection": "none"
+//    }
   },
   // ------------------------------------
   // PHYSICS
   "physics": {
-  "solver": "forceAtlas2Based",
-  "forceAtlas2Based": {
-    "avoidOverlap": 1
-  }
-},
+    "barnesHut": {
+      "gravitationalConstant": -8850,
+      "springLength": 190,
+      "springConstant": 0.035,
+      "avoidOverlap": 1
+    },
+    "minVelocity": 0.75
+  },
   // ------------------------------------
   // MANIPULATION
   manipulation: {
@@ -93,6 +104,10 @@ var json = $.getJSON("data/graph.json")
       edges: data.edges
     };
     var network = new vis.Network(container, data, options);
+      network.setOptions({
+//          disable physics after model has loaded: https://stackoverflow.com/questions/32403578/stop-vis-js-physics-after-nodes-load-but-allow-drag-able-nodes
+            physics: {enabled:true}
+    });
   });
 
 var container = document.getElementById('mynetwork');
@@ -108,3 +123,47 @@ var container = document.getElementById('mynetwork');
 
 </BODY>
 </HTML>
+
+
+var options = {
+  "nodes": {
+    "borderWidthSelected": null,
+    "color": {
+      "border": "#222222",
+      "background": "white",
+      "highlight": {
+        "background": "white"
+      },
+      "hover": {}
+    },
+    "font": {
+      "color": "blue",
+      "size": 19,
+      "strokeWidth": null
+    },
+    "scaling": {
+      "min": null,
+      "max": null
+    },
+    "shape": "image",
+    "shapeProperties": {
+      "borderRadius": null
+    },
+    "size": 70
+  },
+  "edges": {
+    "smooth": false
+  },
+  "manipulation": {
+    "enabled": true
+  },
+  "physics": {
+    "barnesHut": {
+      "gravitationalConstant": -8850,
+      "springLength": 190,
+      "springConstant": 0.035,
+      "avoidOverlap": 1
+    },
+    "minVelocity": 0.75
+  }
+}
