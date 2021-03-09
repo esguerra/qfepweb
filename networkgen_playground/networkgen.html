@@ -19,9 +19,27 @@
     #mynetwork {
         /* width: 600px; */
         width: 100%;
-        height: 700px;
+        height: 600px;
         border: 2px solid lightgray;
     }
+/*    undo/redo button: */
+    #button_undo,
+    #button_redo {
+      position: relative;
+      display: inline-block;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      color: #878787;
+      cursor: pointer;
+    }
+
+    #button_undo:hover,
+    #button_redo:hover {
+      background-color: #dadada;
+}
+      
     </style>
 </HEAD>
 
@@ -53,7 +71,7 @@ var options = {
   shapeProperties: {
      useBorderWithImage : true
   },
-  size: 70,
+  size: 80,
   font : {
     size : 19,
     color : 'blue'
@@ -111,13 +129,6 @@ var json = $.getJSON("data/graph.json")
   });
 
 var container = document.getElementById('mynetwork');
-
-// TODO
-// save adjusted JSON to file
-// change nodes to be circular image shapes.
-// make JSfiddle for github
-// adjust edit mode buttons (in visjs source code)
-// related: do we need all above imports? if so, do we need local vis installation?
     
 </script>
 
