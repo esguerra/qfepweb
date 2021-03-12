@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Network with undo/redo</title>
+  <title>FEP network</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-network.min.css" rel="stylesheet" type="text/css" />
   
@@ -58,11 +58,10 @@
 <body onload="draw();">
 
 
-  <h2>Network with undo/redo</h2>
-  <div id="button_undo">undo
+  <div id="button_undo">
     <i class="fas fa-arrow-left "></i>
   </div>
-  <div id="button_redo">redo
+  <div id="button_redo">
     <i class="fas fa-arrow-right  "></i>
   </div>
   <div id="network-popUp">
@@ -95,58 +94,93 @@ function destroy() {
   }
 }
 
+////////////////////////////////////////
+// VISJS functions
+////////////////////////////////////////
+    
+    
 function draw() {
   destroy();
   nodes = [];
   edges = [];
   // create a network
   var container = document.getElementById("mynetwork");
+    
   var options = {
-    manipulation: {
-      addNode: function(data, callback) {
-        // filling in the popup DOM elements
-        document.getElementById("operation").innerHTML = "Add Node";
-        document.getElementById("node-id").value = data.id;
-        document.getElementById("node-label").value = data.label;
-        document.getElementById("saveButton").onclick = saveData.bind(
-          this,
-          data,
-          callback
-        );
-        document.getElementById("cancelButton").onclick = clearPopUp.bind();
-        document.getElementById("network-popUp").style.display = "block";
-      },
-      editNode: function(data, callback) {
-        // filling in the popup DOM elements
-        document.getElementById("operation").innerHTML = "Edit Node";
-        document.getElementById("node-id").value = data.id;
-        document.getElementById("node-label").value = data.label;
-        document.getElementById("saveButton").onclick = saveData.bind(
-          this,
-          data,
-          callback
-        );
-        document.getElementById("cancelButton").onclick = cancelEdit.bind(
-          this,
-          callback
-        );
-        document.getElementById("network-popUp").style.display = "block";
-      },
-      addEdge: function(data, callback) {
-        if (data.from == data.to) {
-          var r = confirm("Do you want to connect the node to itself?");
-          if (r == true) {
-            callback(data);
-          }
-        } else {
-          callback(data);
+  // ------------------------------------
+  // GENERAL
+  nodes: {
+  // could also make write PNGs as circular images, then set shape : image and omit size: n.
+  // probably should do this. node clicking is inconsistent currently.
+  //shape: "image",
+  borderWidth: 1,
+  shape: "image",
+  shapeProperties: {
+     useBorderWithImage : true
+  },
+  size: 120,
+  font : {
+    size : 30,
+    color : 'blue'
+  },
+  color: {
+    border: "#222222",
+    background: "white",
+    highlight: {
+        border: '#2B7CE9',
+        background: "white"
         }
+  }},
+  "edges": {
+    "smooth": false
+  },
+  // ------------------------------------
+  // PHYSICS
+  "physics": {
+    "hierarchicalRepulsion": {
+      "centralGravity": 0,
+      "springLength": 0.3,
+      "nodeDistance": 450,
+      "damping": 0.13
+    },
+    "minVelocity": 0.76,
+    "solver": "hierarchicalRepulsion",
+    "timestep": 0.7
+  },
+  // ------------------------------------
+  // MANIPULATION
+  manipulation: {
+    addNode : false,
+    addEdge: function (data, callback) {
+          console.log('add edge', data);
+          // empty if statement removes add edge to self funtionality.
+          if (data.from == data.to) {
+//              var r = confirm("Do you want to connect the node to itself?");
+//              if (r === true) {
+//                  callback(data);
+//              }
+          }
+          else {
+              callback(data);
+          }
       }
-    }
+  }
   };
+    
+    
+    
   network = new vis.Network(container, data, options);
+  // disable physics after loading: https://stackoverflow.com/questions/32403578/stop-vis-js-physics-after-nodes-load-but-allow-drag-able-nodes
+  network.on("stabilizationIterationsDone", function () {
+        network.setOptions( { physics: false } );
+    });  
 }
 
+    
+    
+    
+    
+    
 function clearPopUp() {
   document.getElementById("saveButton").onclick = null;
   document.getElementById("cancelButton").onclick = null;
@@ -164,64 +198,23 @@ function saveData(data, callback) {
   clearPopUp();
   callback(data);
 }
-var network = null;
-//var node_init = [
-//  {
-//    id: 1,
-//    label: "Node 1"
-//  },
-//  {
-//    id: 2,
-//    label: "Node 2"
-//  },
-//  {
-//    id: 3,
-//    label: "Node 3"
-//  },
-//  {
-//    id: 4,
-//    label: "Node 4"
-//  },
-//  {
-//    id: 5,
-//    label: "Node 5"
-//  }
-//];
-//
-//var edge_init = [
-//  {
-//    from: 1,
-//    to: 3
-//  },
-//  {
-//    from: 1,
-//    to: 2
-//  },
-//  {
-//    from: 2,
-//    to: 4
-//  },
-//  {
-//    from: 2,
-//    to: 5
-//  },
-//  {
-//    from: 3,
-//    to: 3
-//  }
-//];
     
-var node_init;
-var edge_init;
+// Get out JSON data.
+var network = null;
 
-var json = $.getJSON("data/graph.json")
-  .done(function(data){
-      node_init = data.nodes;
-      edge_init = data.edges;
-    });
-
-var nodes = new vis.DataSet(node_init);
-var edges = new vis.DataSet(edge_init);
+var json_data = null;
+$.ajax({
+    'async': false,
+    'global': false,
+    'url': "data/graph.json",
+    'dataType': "json",
+    'success': function (data) {
+        json_data = data;
+    }
+});
+    
+var nodes = new vis.DataSet(json_data.nodes);
+var edges = new vis.DataSet(json_data.edges);
 
 // create a network
 var data = {
@@ -229,7 +222,7 @@ var data = {
   edges: edges
 };
     
-    HOW DO I MAKE THE FUNCTION ACCESS NODES=EDGES??????? 
+
     
 
 ////////////////////////////////////////
