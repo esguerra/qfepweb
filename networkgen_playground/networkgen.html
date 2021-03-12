@@ -71,9 +71,9 @@ var options = {
   shapeProperties: {
      useBorderWithImage : true
   },
-  size: 80,
+  size: 120,
   font : {
-    size : 19,
+    size : 30,
     color : 'blue'
   },
   color: {
@@ -85,30 +85,38 @@ var options = {
         }
   }},
   "edges": {
-    color: "lightgray",
     "smooth": false
-//      {
-//      "forceDirection": "none"
-//    }
   },
   // ------------------------------------
   // PHYSICS
   "physics": {
-    "barnesHut": {
-      "gravitationalConstant": -8850,
-      "springLength": 190,
-      "springConstant": 0.035,
-      "avoidOverlap": 1
+    "hierarchicalRepulsion": {
+      "centralGravity": 0,
+      "springLength": 0.3,
+      "nodeDistance": 450,
+      "damping": 0.13
     },
-    "minVelocity": 0.75
+    "minVelocity": 0.76,
+    "solver": "hierarchicalRepulsion",
+    "timestep": 0.7
   },
   // ------------------------------------
   // MANIPULATION
   manipulation: {
     addNode : false,
-    addEdge: function(edgeData,callback) {
-        callback(edgeData);
-    }
+    addEdge: function (data, callback) {
+          console.log('add edge', data);
+          // empty if statement removes add edge to self funtionality.
+          if (data.from == data.to) {
+//              var r = confirm("Do you want to connect the node to itself?");
+//              if (r === true) {
+//                  callback(data);
+//              }
+          }
+          else {
+              callback(data);
+          }
+      }
   }
   }
 
@@ -122,11 +130,12 @@ var json = $.getJSON("data/graph.json")
       edges: data.edges
     };
     var network = new vis.Network(container, data, options);
-      network.setOptions({
-//          disable physics after model has loaded: https://stackoverflow.com/questions/32403578/stop-vis-js-physics-after-nodes-load-but-allow-drag-able-nodes
-            physics: {enabled:true}
+    
+    // disable physics after loading: https://stackoverflow.com/questions/32403578/stop-vis-js-physics-after-nodes-load-but-allow-drag-able-nodes
+    network.on("stabilizationIterationsDone", function () {
+        network.setOptions( { physics: false } );
     });
-  });
+});
 
 var container = document.getElementById('mynetwork');
     
