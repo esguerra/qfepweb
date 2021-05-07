@@ -13,7 +13,5 @@ lib
 .vscode
 pyvenv.cfg
 db.sqlite3
-__init__.py
+networkgen_playground/visjs/vis
 
-media/
-static/
